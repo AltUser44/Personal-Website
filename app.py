@@ -30,16 +30,18 @@ lottie_coding = "https://lottie.host/63e9a5f0-f3fc-4ce3-bf56-607c9b5bf15e/9U9fB8
 one_drive_images_path = os.path.join('C:\\', 'Users', 'kpnke', 'OneDrive', 'images')
 img_earth_path = os.path.join(one_drive_images_path, 'earth.png')  # Define the full path to the earth image
 img_allie_path = os.path.join(one_drive_images_path, 'allie.png')  # Define the full path to the allie image
+img_tree_path = os.path.join(one_drive_images_path, 'tree.png') # Define the full path to the tree image
 
 # Load the images
 img_earth = Image.open(img_earth_path)
 img_allie = Image.open(img_allie_path)
+img_tree = Image.open(img_tree_path)
 
 
 # header section
 with st.container():
     st.subheader("Hi, I am Kester :wave:")  # Corrected method name to 'subheader' and added a space before the emoji code
-    st.title("A Data Analyst from the United States")
+    st.title("An Aspiring Data Scientist from the United States")
     st.write("I am passionate about finding intuitive ways to use coding to create and design tools that help enhance user experience.")
     st.markdown("[Learn More](https://pythonandvba.com)")  # Corrected markdown for hyperlink
 
@@ -102,8 +104,21 @@ with st.container():
             """
         )
         st.markdown("Project (https://github.com/AltUser44/A.L.I.E)")
-
-
+with st.container():
+    image_column, text_column, = st.columns((1, 2))
+    with image_column:
+        st.image(img_tree)
+    with text_column:
+        st.subheader("TREE (Forest Fire Simulation)")
+        st.write(
+            """
+            - Written in Java this program visually demonstrates the dynamics of fire spread in a forest environment.
+            - Through a grid-based representation, users can observe how fire propagates from tree to tree, simulating a real-world forest fire scenario.
+            
+            In this link below, you can explore the project furthermore.
+            """
+        )
+        st.markdown("Project (https://github.com/AltUser44/TreeSimulator)")
 
 # Add contact info
 with st.container():
