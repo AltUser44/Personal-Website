@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding Simulation Screen</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #111;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .coding-screen {
+    perspective: 1500px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  .terminal {
+    transform: rotateY(20deg) rotateX(10deg);
+    border: 1px solid #333;
+    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    background-color: #000;
+    width: 65vw; /* Adjust width for your 65-inch screen */
+    height: 60vh; /* Adjust height for your 65-inch screen */
+    overflow: hidden;
+    position: relative;
+  }
+  .code-container {
+    height: 80%;
+    overflow: auto;
+  }
+  .code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 1.5vh;
+    color: #4ABE2F;
+    white-space: pre;
+    text-align: left;
+    margin: 10px 0;
+    overflow: hidden;
+  }
+  .highlight {
+    color: #24ABE0;
+    font-weight: bold;
+  }
+  .message {
+    font-size: 3vh;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #24ABE0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    animation: blinker 1.5s linear infinite;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  /* Adding a glow effect to the code */
+  .code::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+    z-index: 1;
+  }
+  /* 3D effect for the message */
+  .message {
+    transform: translateZ(30px);
+    font-size: 5vh;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #24ABE0;
+  }
+</style>
+</head>
+<body>
+<div class="coding-screen">
+  <div class="terminal">
+    <div class="code-container">
+      <div class="code">
+        // Loading data...
+        <span class="highlight">Data.load()</span>; <br>
+        initializeScreen(); <br>
+        // Prepare the data presentation <br>
+        presentData();
+      </div>
+      <div class="code">
+        // More complex loading procedures... <br>
+        <span class="highlight">ComplexProcess.start()</span>; <br>
+        fetchData(); <br>
+        processData();
+      </div>
+      <!-- More code blocks can be added here for a complex look -->
+    </div>
+    <div class="message">
+      Coding is the Future
+    </div>
+  </div>
+</div>
+</body>
+</html>
