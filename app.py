@@ -30,9 +30,10 @@ lottie_coding = "https://lottie.host/63e9a5f0-f3fc-4ce3-bf56-607c9b5bf15e/9U9fB8
 one_drive_images_path = os.path.join('C:\\', 'Users', 'kpnke', 'OneDrive', 'my_streamlit_app', 'images')
 
 # Define the full paths to the image files
-img_earth_path = os.path.join(one_drive_images_path, 'earth.png')  # Full path to the earth image
-img_allie_path = os.path.join(one_drive_images_path, 'allie.png')  # Full path to the allie image
-img_tree_path = os.path.join(one_drive_images_path, 'tree.png')    # Full path to the tree image
+img_earth_path = 'images/earth.png'
+img_allie_path = 'images/allie.png'
+img_tree_path = 'images/tree.png'
+
 
 # Load the images
 img_earth = Image.open(img_earth_path)
