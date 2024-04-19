@@ -4,6 +4,8 @@ Welcome to my personal portfolio website, built with Streamlit. This website sho
 
 ## Overview
 
+![Screenshot 2024-04-19 034334](https://github.com/AltUser44/Personal-Website/assets/138399028/67225a02-93d4-4406-8e5f-1a1b61439dbf)
+
 This portfolio is a Streamlit web application that presents my projects, skills, and contact information. 
 It's designed to be responsive, user-friendly, and visually appealing, with a focus on simplicity and clarity to provide a professional experience for users.
 
