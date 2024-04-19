@@ -26,16 +26,19 @@ local_css("OneDrive/style/style.css")
 # loading assets
 lottie_coding = "https://lottie.host/63e9a5f0-f3fc-4ce3-bf56-607c9b5bf15e/9U9fB8vOyy.json"
 
-# Define path to the images
-one_drive_images_path = os.path.join('C:\\', 'Users', 'kpnke', 'OneDrive', 'images')
-img_earth_path = os.path.join(one_drive_images_path, 'earth.png')  # Define the full path to the earth image
-img_allie_path = os.path.join(one_drive_images_path, 'allie.png')  # Define the full path to the allie image
-img_tree_path = os.path.join(one_drive_images_path, 'tree.png') # Define the full path to the tree image
+# Update the base path to include the 'my_streamlit_app' directory
+one_drive_images_path = os.path.join('C:\\', 'Users', 'kpnke', 'OneDrive', 'my_streamlit_app', 'images')
+
+# Define the full paths to the image files
+img_earth_path = os.path.join(one_drive_images_path, 'earth.png')  # Full path to the earth image
+img_allie_path = os.path.join(one_drive_images_path, 'allie.png')  # Full path to the allie image
+img_tree_path = os.path.join(one_drive_images_path, 'tree.png')    # Full path to the tree image
 
 # Load the images
 img_earth = Image.open(img_earth_path)
 img_allie = Image.open(img_allie_path)
 img_tree = Image.open(img_tree_path)
+
 
 
 # header section
@@ -119,7 +122,7 @@ with st.container():
         )
         st.markdown("Project (https://github.com/AltUser44/TreeSimulator)")
 
-# Define a function to style the form
+# function to style the form
 def style_form():
     st.markdown(
         """
