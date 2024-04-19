@@ -1,0 +1,3 @@
+streamlit
+streamlit_lottie
+# Add other packages your app uses, one per line

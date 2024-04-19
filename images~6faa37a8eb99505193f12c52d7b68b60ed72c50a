@@ -1,0 +1,11 @@
+# Within your Streamlit app.py file
+
+# Relative path to the image in the 'images' folder
+img_earth_path = "images/earth.png"
+img_allie_path = "images/allie.png"
+img_tree_path = "images/tree.png"
+
+# Load the images using the Streamlit API
+st.image(img_earth_path, caption="Earth")
+st.image(img_allie_path, caption="Allie")
+st.image(img_tree_path, caption="Tree")
