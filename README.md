@@ -23,7 +23,7 @@ It's designed to be responsive, user-friendly, and visually appealing, with a fo
 
 The portfolio is currently live and can be viewed on Streamlit at the following URL:
 
-[View Live Portfolio](https://share.streamlit.io/your-github-username/your-repo-name/your-app-file)
+[View Live Portfolio](https://personal-website-rjek9tvfvacqqd6t4ulzyt.streamlit.app/)
 
 Feel free to visit and explore my projects and professional journey.
 
