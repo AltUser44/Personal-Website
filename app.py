@@ -43,7 +43,6 @@ with st.container():
     st.subheader("Hi, I am Kester :wave:")  # Corrected method name to 'subheader' and added a space before the emoji code
     st.title("An Aspiring Data Scientist from the United States")
     st.write("I am passionate about finding intuitive ways to use coding to create and design tools that help enhance user experience.")
-    st.markdown("[Learn More](https://pythonandvba.com)")  # Corrected markdown for hyperlink
 
 # What I do
 with st.container():
@@ -120,25 +119,53 @@ with st.container():
         )
         st.markdown("Project (https://github.com/AltUser44/TreeSimulator)")
 
-# Add contact info
-with st.container():
-    st.write("---")
-    st.header("Get In Touch With Me!")
-    st.write("##")
+# Define a function to style the form
+def style_form():
+    st.markdown(
+        """
+        <style>
+            .stTextInput input, .stTextArea textarea {
+                background-color: white !important; /* Set the background color to white */
+            }
+            .stTextInput, .stTextArea, .stButton > button {
+                width: 50% !important; /* Set the width to be 50% of the parent */
+                margin-bottom: 10px !important;
+                border: 1px solid #ccc !important;
+                border-radius: 5px !important;
+            }
+            .stButton > button {
+                background-color: #4CAF50 !important; /* Green tone for the button */
+                color: white !important;
+                border: none !important;
+                border-radius: 5px !important;
+                cursor: pointer !important;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+                transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+            }
+            .stButton > button:hover {
+                background-color: #367c39 !important; /* Darker green tone on hover */
+                transform: scale(1.05); /* Slight increase in size */
+                box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover for "lifting" effect */
+            }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
 
-# Documentation: email address
-contact_form = """
-<form action="https://formsubmit.co/codingisfun.kpnkese@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Your email" required>
-    <textarea name="message" placeholder="Your message here" required></textarea>
-    <button type="submit">Send</button>
-</form>
+# Add contact info with Streamlit's native form elements
+def display_contact_form():
+    with st.container():
+        st.write("---")
+        st.header("Get In Touch With Me!")
+        st.write("##")
+        style_form()  # Call the function to apply the styles
+        with st.form(key='contact_form'):
+            name = st.text_input('Your name')
+            email = st.text_input('Your email')
+            message = st.text_area('Your message here', height=200)
+            submit_button = st.form_submit_button('Send')
+            if submit_button:
+                # Process the form data here (e.g., send an email)
+                st.success("Thank you for your message!")
 
-"""
-left_column, right_column = st.columns(2)
-with left_column:
-    st.markdown(contact_form, unsafe_allow_html=True)
-with right_column:
-    st.empty()
+display_contact_form()  # Call the function to display the form
